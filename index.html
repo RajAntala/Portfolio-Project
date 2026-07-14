@@ -80,7 +80,19 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero -->
     <section id="hero">
@@ -160,6 +172,24 @@
 
                 <a href="#contact" class="btn btn-primary" style="display:inline-flex;margin-top:1.5rem;">Let's
                     Collaborate →</a>
+            </div>
+            <div class="about-stats reveal reveal-delay-1">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="1">0</div>
+                    <div class="stat-label">Year+ Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-label">Shopify Apps Built</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Core Technologies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="100" data-suffix="%">0</div>
+                    <div class="stat-label">Clean Code Focus</div>
+                </div>
             </div>
         </div>
     </section>
@@ -488,9 +518,28 @@
                 gsap.to(el, {
                     opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
                     delay: isProjectCard ? (i % 2) * 0.1 : 0,
-                    scrollTrigger: { trigger: el, start: 'top 88%' }
+                    scrollTrigger: { trigger: el, start: 'top 90%', once: true }
                 });
             });
+
+            // Fonts load asynchronously and change layout height *after* ScrollTrigger
+            // has already measured trigger positions — this can leave a trigger point
+            // stale, so a card's reveal condition never fires. Recalculate once fonts
+            // and all assets are actually in place.
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => ScrollTrigger.refresh());
+            }
+            window.addEventListener('load', () => ScrollTrigger.refresh());
+
+            // Final safety net: if anything is still hidden a few seconds in
+            // (stale trigger, slow asset, edge-case browser), just reveal it.
+            setTimeout(() => {
+                document.querySelectorAll('.reveal').forEach(el => {
+                    if (getComputedStyle(el).opacity === '0') {
+                        gsap.to(el, { opacity: 1, y: 0, duration: 0.5 });
+                    }
+                });
+            }, 3500);
         } else {
             gsap.set('.reveal', { opacity: 1, y: 0 });
         }
@@ -518,6 +567,62 @@
                 nav.style.borderBottom = 'none';
             }
         });
+
+        // ---------- Mobile menu ----------
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function closeMobileMenu() {
+            navToggle.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // ---------- Active nav link on scroll ----------
+        const sections = document.querySelectorAll('section[id]');
+        const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+        const navSpy = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    allNavLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(sec => navSpy.observe(sec));
+
+        // ---------- About stats count-up ----------
+        const statEls = document.querySelectorAll('.stat-number');
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseInt(el.dataset.count, 10);
+                const suffix = el.dataset.suffix || '+';
+                const duration = 1400;
+                const start = performance.now();
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(target * eased) + suffix;
+                    if (progress < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+                statObserver.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        statEls.forEach(el => statObserver.observe(el));
 
         // ---------- Contact form (Web3Forms) ----------
         const form = document.getElementById('contactForm');
