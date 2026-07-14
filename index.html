@@ -1,398 +1,859 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raj Portfolio — Creative Developer</title>
+    <!-- Primary SEO -->
+    <title>Raj Antala — Shopify App Developer &amp; React JS Specialist</title>
+    <meta
+      name="description"
+      content="Raj Antala is a Shopify App Developer &amp; React JS Specialist building custom Shopify apps, Shopify Functions, and high-performance React/Next.js web applications."
+    />
+    <meta
+      name="keywords"
+      content="Raj Antala, Shopify App Developer, Shopify Developer India, React JS Developer, Next.js Developer, Shopify Functions, Shopify Remix, Freelance Web Developer"
+    />
+    <meta name="author" content="Raj Antala" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://rajantala.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rajantala.com/" />
+    <meta
+      property="og:title"
+      content="Raj Antala — Shopify App Developer &amp; React JS Specialist"
+    />
+    <meta
+      property="og:description"
+      content="Custom Shopify apps, Shopify Functions and high-performance React/Next.js web experiences — built by Raj Antala."
+    />
+    <meta
+      property="og:image"
+      content="https://rajantala.com/assets/og-cover.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Raj Antala Portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@razz_antala" />
+    <meta
+      name="twitter:title"
+      content="Raj Antala — Shopify App Developer &amp; React JS Specialist"
+    />
+    <meta
+      name="twitter:description"
+      content="Custom Shopify apps, Shopify Functions and high-performance React/Next.js web experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rajantala.com/assets/og-cover.jpg"
+    />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0A0A0F" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0A0F'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='52' font-weight='800' fill='%237C3AED' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E"
+    />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
 
-<body>
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Raj Antala",
+        "url": "https://rajantala.com/",
+        "jobTitle": "Shopify App Developer & React JS Specialist",
+        "email": "mailto:rajantala240@gmail.com",
+        "sameAs": [
+          "https://in.linkedin.com/in/razz-antala-938830241",
+          "https://x.com/razz_antala",
+          "https://www.instagram.com/razz._18"
+        ],
+        "knowsAbout": [
+          "Shopify App Development",
+          "React.js",
+          "Next.js",
+          "TypeScript",
+          "Shopify Functions",
+          "Shopify Liquid",
+          "Node.js"
+        ]
+      }
+    </script>
+  </head>
 
+  <body>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follow" id="cursor-follow"></div>
 
     <!-- Nav -->
     <nav>
-        <a href="#hero" class="nav-logo">RA<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <a href="#hero" class="nav-logo">RA<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Hero -->
     <section id="hero">
-        <div class="hero-bg">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-            <div class="noise"></div>
+      <div class="hero-bg">
+        <div class="blob blob-1" data-depth="0.6"></div>
+        <div class="blob blob-2" data-depth="0.9"></div>
+        <div class="blob blob-3" data-depth="1.3"></div>
+        <div class="noise"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-tag" data-hero>Available for work</div>
+        <h1 data-hero>
+          Creative<br />
+          <span class="accent">Web Dev</span>
+          <span class="outline">&amp; Designer</span>
+        </h1>
+        <p class="hero-desc" data-hero>
+          I focus on creating beautiful digital experiences — a perfect blend of
+          code and design.
+        </p>
+        <div class="hero-ctas" data-hero>
+          <a href="#projects" class="btn btn-primary">View My Work →</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
         </div>
-        <div class="hero-content">
-            <div class="hero-tag">Available for work</div>
-            <h1>
-                Creative<br>
-                <span class="accent">Web Dev</span>
-                <span class="outline">&amp; Designer</span>
-            </h1>
-            <p class="hero-desc">
-                I focus on creating beautiful digital experiences — a perfect blend of code and design.
-            </p>
-            <div class="hero-ctas">
-                <a href="#projects" class="btn btn-primary">View My Work →</a>
-                <a href="#contact" class="btn btn-outline">Let's Talk</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            Scroll down
-        </div>
+      </div>
+      <div class="hero-scroll" data-hero>
+        <div class="scroll-line"></div>
+        Scroll down
+      </div>
     </section>
 
     <!-- Marquee -->
     <div class="marquee-wrap">
-        <div class="marquee-track">
-            <span>React.js</span><span class="dot">◆</span>
-            <span>Next.js</span><span class="dot">◆</span>
-            <span>Node.js</span><span class="dot">◆</span>
-            <span>Shopify Liquid</span><span class="dot">◆</span>
-            <span>TypeScript</span><span class="dot">◆</span>
-            <span>JavaScript</span><span class="dot">◆</span>
-            <span>PHP</span><span class="dot">◆</span>
-            <span>MUI</span><span class="dot">◆</span>
-            <span>Tailwind CSS</span><span class="dot">◆</span>
+      <div class="marquee-track">
+        <span>React.js</span><span class="dot">◆</span> <span>Next.js</span
+        ><span class="dot">◆</span> <span>Node.js</span
+        ><span class="dot">◆</span> <span>Shopify Liquid</span
+        ><span class="dot">◆</span> <span>TypeScript</span
+        ><span class="dot">◆</span> <span>JavaScript</span
+        ><span class="dot">◆</span> <span>PHP</span><span class="dot">◆</span>
+        <span>MUI</span><span class="dot">◆</span> <span>Tailwind CSS</span
+        ><span class="dot">◆</span>
 
-            <span>React.js</span><span class="dot">◆</span>
-            <span>Next.js</span><span class="dot">◆</span>
-            <span>Node.js</span><span class="dot">◆</span>
-            <span>Shopify Liquid</span><span class="dot">◆</span>
-            <span>TypeScript</span><span class="dot">◆</span>
-            <span>JavaScript</span><span class="dot">◆</span>
-            <span>PHP</span><span class="dot">◆</span>
-            <span>MUI</span><span class="dot">◆</span>
-            <span>Tailwind CSS</span><span class="dot">◆</span>
-        </div>
+        <span>React.js</span><span class="dot">◆</span> <span>Next.js</span
+        ><span class="dot">◆</span> <span>Node.js</span
+        ><span class="dot">◆</span> <span>Shopify Liquid</span
+        ><span class="dot">◆</span> <span>TypeScript</span
+        ><span class="dot">◆</span> <span>JavaScript</span
+        ><span class="dot">◆</span> <span>PHP</span><span class="dot">◆</span>
+        <span>MUI</span><span class="dot">◆</span> <span>Tailwind CSS</span
+        ><span class="dot">◆</span>
+      </div>
     </div>
 
     <!-- About -->
     <section id="about">
-        <div style="max-width:1100px;margin:0 auto;">
-            <div class="section-label reveal">About Me</div>
-            <h2 class="reveal reveal-delay-1">I am a <span style="color:var(--c2)">problem solver</span><br>who
-                builds scalable e-commerce solutions.</h2>
+      <div style="max-width: 1100px; margin: 0 auto">
+        <div class="section-label reveal">About Me</div>
+        <h2 class="reveal reveal-delay-1">
+          I am a <span style="color: var(--c2)">problem solver</span><br />who
+          builds scalable e-commerce solutions.
+        </h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            My name is <strong>Raj Antala</strong>. I am a dedicated
+            <strong>Shopify App Developer and React JS Specialist</strong>. For
+            the past year, I have been deeply involved in building custom
+            <strong>Shopify Apps</strong> and robust e-commerce solutions.
+          </p>
+
+          <p>
+            My core expertise lies in
+            <strong>React, TypeScript, and Next.js</strong>. I specialize in
+            creating high-performance web applications and seamless
+            <strong>Shopify extensions</strong> that help businesses scale their
+            online presence effectively.
+          </p>
+
+          <p>
+            I focus on writing clean, maintainable code and building features
+            like
+            <strong
+              >Custom Discounts, Shopify Functions, and API Integrations</strong
+            >. When I'm not coding, I contribute to open-source and stay updated
+            with the latest in the Shopify ecosystem. ☕
+          </p>
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+            style="display: inline-flex; margin-top: 1.5rem"
+            >Let's Collaborate →</a
+          >
         </div>
-        <div class="about-grid">
-            <div class="about-text reveal">
-                <p>My name is <strong>Raj Antala</strong>. I am a dedicated <strong>Shopify App Developer and React JS
-                        Specialist</strong>. For the past year, I have been deeply involved in building custom
-                    <strong>Shopify Apps</strong> and robust e-commerce solutions.
-                </p>
-
-                <p>My core expertise lies in <strong>React, TypeScript, and Next.js</strong>. I specialize in creating
-                    high-performance web applications and seamless <strong>Shopify extensions</strong> that help
-                    businesses scale their online presence effectively.</p>
-
-                <p>I focus on writing clean, maintainable code and building features like <strong>Custom Discounts,
-                        Shopify Functions, and API Integrations</strong>. When I'm not coding, I contribute to
-                    open-source and stay updated with the latest in the Shopify ecosystem. ☕</p>
-
-                <a href="#contact" class="btn btn-primary" style="display:inline-flex;margin-top:1.5rem;">Let's
-                    Collaborate →</a>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills">
-        <div class="skills-header">
-            <div class="section-label reveal">My Expertise</div>
-            <h2 class="reveal reveal-delay-1">Skills that <span style="color:var(--c3)">drive results</span></h2>
+      <div class="skills-header">
+        <div class="section-label reveal">My Expertise</div>
+        <h2 class="reveal reveal-delay-1">
+          Skills that <span style="color: var(--c3)">drive results</span>
+        </h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal" style="--card-accent: #f7df1e">
+          <span class="skill-icon">🟨</span>
+          <div class="skill-name">JavaScript (ES6+)</div>
+          <div class="skill-desc">
+            Modern JS expert — promises, async/await, and closure jeva complex
+            concepts ma master.
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label">
+              <span>Proficiency</span><span>96%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 96%"></div>
+            </div>
+          </div>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card reveal" style="--card-accent:#F7DF1E">
-                <span class="skill-icon">🟨</span>
-                <div class="skill-name">JavaScript (ES6+)</div>
-                <div class="skill-desc">Modern JS expert — promises, async/await, and closure jeva complex concepts ma
-                    master.</div>
-                <div class="skill-bar-wrap">
-                    <div class="skill-bar-label"><span>Proficiency</span><span>96%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill" style="width:96%"></div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="skill-card reveal reveal-delay-1" style="--card-accent:#3178C6">
-                <span class="skill-icon">🟦</span>
-                <div class="skill-name">TypeScript</div>
-                <div class="skill-desc">Type-safe code lakhva ma expert, jethi bugs pan na aave ane architecture
-                    scalable rahe.</div>
-                <div class="skill-bar-wrap">
-                    <div class="skill-bar-label"><span>Proficiency</span><span>90%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill" style="width:90%"></div>
-                    </div>
-                </div>
+        <div
+          class="skill-card reveal reveal-delay-1"
+          style="--card-accent: #3178c6"
+        >
+          <span class="skill-icon">🟦</span>
+          <div class="skill-name">TypeScript</div>
+          <div class="skill-desc">
+            Type-safe code lakhva ma expert, jethi bugs pan na aave ane
+            architecture scalable rahe.
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label">
+              <span>Proficiency</span><span>90%</span>
             </div>
-
-            <div class="skill-card reveal reveal-delay-2" style="--card-accent:#61DAFB">
-                <span class="skill-icon">⚛️</span>
-                <div class="skill-name">React / Next.js</div>
-                <div class="skill-desc">SSR, ISR, ane high-performance components banava mate Next.js no upyog.</div>
-                <div class="skill-bar-wrap">
-                    <div class="skill-bar-label"><span>Proficiency</span><span>94%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill" style="width:94%"></div>
-                    </div>
-                </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 90%"></div>
             </div>
-
-            <div class="skill-card reveal" style="--card-accent:#764ABC">
-                <span class="skill-icon">🔄</span>
-                <div class="skill-name">Redux / Toolkit</div>
-                <div class="skill-desc">Complex application state ne handle karva mate Redux Toolkit ane Thunk ma
-                    mastery.</div>
-                <div class="skill-bar-wrap">
-                    <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill" style="width:88%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-card reveal reveal-delay-1" style="--card-accent:#95BF47">
-                <span class="skill-icon">🛍️</span>
-                <div class="skill-name">Shopify App Dev</div>
-                <div class="skill-desc">1 year+ experience in Shopify Remix, App Bridge, ane Shopify Functions.</div>
-                <div class="skill-bar-wrap">
-                    <div class="skill-bar-label"><span>Proficiency</span><span>92%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-bar-fill" style="width:92%"></div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div
+          class="skill-card reveal reveal-delay-2"
+          style="--card-accent: #61dafb"
+        >
+          <span class="skill-icon">⚛️</span>
+          <div class="skill-name">React / Next.js</div>
+          <div class="skill-desc">
+            SSR, ISR, ane high-performance components banava mate Next.js no
+            upyog.
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label">
+              <span>Proficiency</span><span>94%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 94%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: #764abc">
+          <span class="skill-icon">🔄</span>
+          <div class="skill-name">Redux / Toolkit</div>
+          <div class="skill-desc">
+            Complex application state ne handle karva mate Redux Toolkit ane
+            Thunk ma mastery.
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label">
+              <span>Proficiency</span><span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="skill-card reveal reveal-delay-1"
+          style="--card-accent: #95bf47"
+        >
+          <span class="skill-icon">🛍️</span>
+          <div class="skill-name">Shopify App Dev</div>
+          <div class="skill-desc">
+            1 year+ experience in Shopify Remix, App Bridge, ane Shopify
+            Functions.
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label">
+              <span>Proficiency</span><span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-        <div class="projects-header">
-            <div class="section-label reveal">Portfolio</div>
-            <h2 class="reveal reveal-delay-1">Selected <span style="color:var(--c1)">Projects</span></h2>
+      <div class="projects-header">
+        <div class="section-label reveal">Portfolio</div>
+        <h2 class="reveal reveal-delay-1">
+          Selected <span style="color: var(--c1)">Projects</span>
+        </h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <div
+              class="project-thumb-inner"
+              style="background: linear-gradient(135deg, #95bf47, #004c3f)"
+            >
+              01
+            </div>
+            <div class="project-overlay"></div>
+            <div class="project-tag">Shopify App</div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Custom Discount Manager</div>
+            <div class="project-desc">
+              A powerful Shopify app built to manage complex discount logic
+              using Shopify Functions and Remix.
+            </div>
+            <div class="project-techs">
+              <span class="tech-pill">Shopify Remix</span
+              ><span class="tech-pill">TypeScript</span
+              ><span class="tech-pill">Prisma</span
+              ><span class="tech-pill">Polaris</span>
+            </div>
+          </div>
         </div>
-        <div class="projects-grid">
-            <div class="project-card reveal">
-                <div class="project-thumb">
-                    <div class="project-thumb-inner" style="background:linear-gradient(135deg,#95BF47,#004c3f);">01
-                    </div>
-                    <div class="project-overlay"></div>
-                    <div class="project-tag">Shopify App</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-title">Custom Discount Manager</div>
-                    <div class="project-desc">A powerful Shopify app built to manage complex discount logic using
-                        Shopify Functions and Remix.</div>
-                    <div class="project-techs">
-                        <span class="tech-pill">Shopify Remix</span><span class="tech-pill">TypeScript</span><span
-                            class="tech-pill">Prisma</span><span class="tech-pill">Polaris</span>
-                    </div>
-                </div>
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-thumb">
+            <div
+              class="project-thumb-inner"
+              style="background: linear-gradient(135deg, #00e5ff, #00e676)"
+            >
+              02
             </div>
-            <div class="project-card reveal reveal-delay-1">
-                <div class="project-thumb">
-                    <div class="project-thumb-inner" style="background:linear-gradient(135deg,#00E5FF,#00E676);">02
-                    </div>
-                    <div class="project-overlay"></div>
-                    <div class="project-tag">Dashboard</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-title">DataPulse — Analytics Dashboard</div>
-                    <div class="project-desc">Real-time analytics aur beautiful data visualizations ke saath ek SaaS
-                        dashboard. 500+ companies use karti hain.</div>
-                    <div class="project-techs">
-                        <span class="tech-pill">React</span><span class="tech-pill">D3.js</span><span
-                            class="tech-pill">Node.js</span><span class="tech-pill">WebSocket</span>
-                    </div>
-                </div>
+            <div class="project-overlay"></div>
+            <div class="project-tag">Dashboard</div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">DataPulse — Analytics Dashboard</div>
+            <div class="project-desc">
+              Real-time analytics aur beautiful data visualizations ke saath ek
+              SaaS dashboard. 500+ companies use karti hain.
             </div>
-            <div class="project-card reveal">
-                <div class="project-thumb">
-                    <div class="project-thumb-inner" style="background:linear-gradient(135deg,#FFD600,#FF3366);">03
-                    </div>
-                    <div class="project-overlay"></div>
-                    <div class="project-tag">Branding</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-title">Zestify — Food Delivery Brand</div>
-                    <div class="project-desc">Complete brand identity aur website design ek food startup ke liye. Fun,
-                        youthful aur conversion-focused design.</div>
-                    <div class="project-techs">
-                        <span class="tech-pill">Figma</span><span class="tech-pill">HTML/CSS</span><span
-                            class="tech-pill">GSAP</span><span class="tech-pill">Framer</span>
-                    </div>
-                </div>
+            <div class="project-techs">
+              <span class="tech-pill">React</span
+              ><span class="tech-pill">D3.js</span
+              ><span class="tech-pill">Node.js</span
+              ><span class="tech-pill">WebSocket</span>
             </div>
-            <div class="project-card reveal reveal-delay-1">
-                <div class="project-thumb">
-                    <div class="project-thumb-inner" style="background:linear-gradient(135deg,#7C4DFF,#00E5FF);">04
-                    </div>
-                    <div class="project-overlay"></div>
-                    <div class="project-tag">Mobile App</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-title">MindSpace — Meditation App UI</div>
-                    <div class="project-desc">Ek calming aur intuitive meditation app ka complete UI/UX design —
-                        wireframes se lekar high-fidelity prototype tak.</div>
-                    <div class="project-techs">
-                        <span class="tech-pill">Figma</span><span class="tech-pill">Prototyping</span><span
-                            class="tech-pill">User Research</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <div
+              class="project-thumb-inner"
+              style="background: linear-gradient(135deg, #ffd600, #ff3366)"
+            >
+              03
+            </div>
+            <div class="project-overlay"></div>
+            <div class="project-tag">Branding</div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Zestify — Food Delivery Brand</div>
+            <div class="project-desc">
+              Complete brand identity aur website design ek food startup ke
+              liye. Fun, youthful aur conversion-focused design.
+            </div>
+            <div class="project-techs">
+              <span class="tech-pill">Figma</span
+              ><span class="tech-pill">HTML/CSS</span
+              ><span class="tech-pill">GSAP</span
+              ><span class="tech-pill">Framer</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-thumb">
+            <div
+              class="project-thumb-inner"
+              style="background: linear-gradient(135deg, #7c4dff, #00e5ff)"
+            >
+              04
+            </div>
+            <div class="project-overlay"></div>
+            <div class="project-tag">Mobile App</div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">MindSpace — Meditation App UI</div>
+            <div class="project-desc">
+              Ek calming aur intuitive meditation app ka complete UI/UX design —
+              wireframes se lekar high-fidelity prototype tak.
+            </div>
+            <div class="project-techs">
+              <span class="tech-pill">Figma</span
+              ><span class="tech-pill">Prototyping</span
+              ><span class="tech-pill">User Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-        <div class="contact-inner">
-            <div class="section-label reveal" style="justify-content:center;">Get in Touch</div>
-            <h2 class="reveal reveal-delay-1">
-                Together,<br><span class="outline">we create something</span><br>amazing.
-            </h2>
-            <p class="reveal reveal-delay-2">
-                If you have a project idea, a collaboration plan, or just want to say hello — I am always available!
-            </p>
-            <div class="contact-links reveal reveal-delay-3">
-                <a href="mailto:rajantala240@gmail.com" class="contact-link">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </span> Email Me
-                </a>
-
-                <a href="https://in.linkedin.com/in/razz-antala-938830241" target="_blank" class="contact-link">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </span> LinkedIn
-                </a>
-
-                <a href="https://x.com/razz_antala" target="_blank" class="contact-link">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                            </path>
-                        </svg>
-                    </span> Twitter
-                </a>
-
-                <a href="https://www.instagram.com/razz._18" target="_blank" class="contact-link">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </span> Instagram
-                </a>
-
-                <a href="#" target="_blank" class="contact-link">
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                    </span> Resume
-                </a>
-            </div>
+      <div class="contact-inner">
+        <div class="section-label reveal" style="justify-content: center">
+          Get in Touch
         </div>
+        <h2 class="reveal reveal-delay-1">
+          Together,<br /><span class="outline">we create something</span
+          ><br />amazing.
+        </h2>
+        <p class="reveal reveal-delay-2">
+          If you have a project idea, a collaboration plan, or just want to say
+          hello — I am always available!
+        </p>
+
+        <!--
+                CONTACT FORM — powered by Web3Forms (free, no backend needed).
+                Setup (2 min):
+                1. Go to https://web3forms.com and enter your email (rajantala240@gmail.com) to get a free Access Key.
+                2. Replace YOUR_ACCESS_KEY_HERE below with that key.
+                Every submission is emailed straight to your inbox.
+            -->
+        <form class="contact-form reveal reveal-delay-3" id="contactForm">
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input
+            type="hidden"
+            name="subject"
+            value="New message from rajantala.dev portfolio"
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary form-submit"
+            id="formSubmitBtn"
+          >
+            Send Message →
+          </button>
+          <p
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+
+        <div class="contact-links reveal reveal-delay-3">
+          <a href="mailto:rajantala240@gmail.com" class="contact-link">
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            Email Me
+          </a>
+
+          <a
+            href="https://in.linkedin.com/in/razz-antala-938830241"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </span>
+            LinkedIn
+          </a>
+
+          <a
+            href="https://x.com/razz_antala"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                ></path>
+              </svg>
+            </span>
+            Twitter
+          </a>
+
+          <a
+            href="https://www.instagram.com/razz._18"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </span>
+            Instagram
+          </a>
+
+          <a href="#" target="_blank" rel="noopener" class="contact-link">
+            <span class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </span>
+            Resume
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Raj Antala. Sab rights reserved.</p>
-        <a href="#hero" class="footer-back-top">↑ Go to Top</a>
+      <p>© 2026 Raj Antala. Sab rights reserved.</p>
+      <a href="#hero" class="footer-back-top">↑ Go to Top</a>
     </footer>
 
     <script>
-        // Custom cursor
-        const cursor = document.getElementById('cursor');
-        const cursorFollow = document.getElementById('cursor-follow');
-        let mouseX = 0, mouseY = 0;
+      // ---------- Custom cursor ----------
+      const cursor = document.getElementById("cursor");
+      const cursorFollow = document.getElementById("cursor-follow");
+      let mouseX = 0,
+        mouseY = 0;
+      const hasFinePointer = window.matchMedia(
+        "(hover: hover) and (pointer: fine)",
+      ).matches;
 
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX; mouseY = e.clientY;
-            cursor.style.left = mouseX - 6 + 'px';
-            cursor.style.top = mouseY - 6 + 'px';
-            cursorFollow.style.left = mouseX - 18 + 'px';
-            cursorFollow.style.top = mouseY - 18 + 'px';
+      if (hasFinePointer) {
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursor.style.left = mouseX - 6 + "px";
+          cursor.style.top = mouseY - 6 + "px";
+          cursorFollow.style.left = mouseX - 18 + "px";
+          cursorFollow.style.top = mouseY - 18 + "px";
         });
 
-        document.querySelectorAll('a, button, .project-card, .skill-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(2.5)';
-                cursorFollow.style.transform = 'scale(0.5)';
+        document
+          .querySelectorAll("a, button, .project-card, .skill-card")
+          .forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+              cursor.style.transform = "scale(2.5)";
+              cursorFollow.style.transform = "scale(0.5)";
             });
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursorFollow.style.transform = 'scale(1)';
+            el.addEventListener("mouseleave", () => {
+              cursor.style.transform = "scale(1)";
+              cursorFollow.style.transform = "scale(1)";
             });
+          });
+      }
+
+      // ---------- GSAP setup ----------
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      gsap.registerPlugin(ScrollTrigger);
+
+      if (!prefersReducedMotion) {
+        // Hero entrance sequence
+        gsap
+          .timeline({ defaults: { ease: "power3.out" } })
+          .from("[data-hero]", {
+            y: 30,
+            opacity: 0,
+            duration: 0.9,
+            stagger: 0.12,
+          })
+          .from(
+            ".blob",
+            {
+              scale: 0.6,
+              opacity: 0,
+              duration: 1.4,
+              stagger: 0.15,
+              ease: "power2.out",
+            },
+            0,
+          );
+
+        // Ambient blob float
+        gsap.to(".blob-1", {
+          y: 30,
+          x: 20,
+          scale: 1.08,
+          duration: 8,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+        });
+        gsap.to(".blob-2", {
+          y: -25,
+          x: -15,
+          scale: 1.1,
+          duration: 9,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          delay: 0.5,
+        });
+        gsap.to(".blob-3", {
+          y: 20,
+          x: -20,
+          scale: 1.05,
+          duration: 7,
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          delay: 1,
         });
 
-        // Scroll reveal
-        const revealEls = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    if (entry.target.classList.contains('skill-card')) {
-                        entry.target.classList.add('visible');
-                    }
-                }
-            });
-        }, { threshold: 0.12 });
-
-        revealEls.forEach(el => observer.observe(el));
-
-        // Nav scroll effect
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 60) {
-                nav.style.background = 'rgba(10,10,15,0.85)';
-                nav.style.backdropFilter = 'blur(20px)';
-                nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
-            } else {
-                nav.style.background = 'transparent';
-                nav.style.backdropFilter = 'none';
-                nav.style.borderBottom = 'none';
-            }
+        // Subtle parallax on scroll
+        document.querySelectorAll("[data-depth]").forEach((el) => {
+          const depth = parseFloat(el.dataset.depth);
+          gsap.to(el, {
+            yPercent: 20 * depth,
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#hero",
+              start: "top top",
+              end: "bottom top",
+              scrub: 0.5,
+            },
+          });
         });
+
+        // Scroll reveals
+        gsap.utils.toArray(".reveal").forEach((el, i) => {
+          gsap.to(el, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 85%" },
+          });
+        });
+
+        // Project cards stagger
+        gsap.utils
+          .toArray(".projects-grid .project-card")
+          .forEach((card, i) => {
+            gsap.from(card, {
+              opacity: 0,
+              y: 40,
+              duration: 0.7,
+              delay: (i % 2) * 0.1,
+              ease: "power3.out",
+              scrollTrigger: { trigger: card, start: "top 88%" },
+            });
+          });
+      } else {
+        gsap.set(".reveal", { opacity: 1, y: 0 });
+      }
+
+      // Skill bar fill (kept as CSS-class driven, works regardless of motion pref)
+      const skillCards = document.querySelectorAll(".skill-card");
+      const skillObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.3 },
+      );
+      skillCards.forEach((el) => skillObserver.observe(el));
+
+      // ---------- Nav scroll effect ----------
+      const nav = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 60) {
+          nav.style.background = "rgba(10,10,15,0.85)";
+          nav.style.backdropFilter = "blur(20px)";
+          nav.style.borderBottom = "1px solid rgba(255,255,255,0.06)";
+        } else {
+          nav.style.background = "transparent";
+          nav.style.backdropFilter = "none";
+          nav.style.borderBottom = "none";
+        }
+      });
+
+      // ---------- Contact form (Web3Forms) ----------
+      const form = document.getElementById("contactForm");
+      const statusEl = document.getElementById("formStatus");
+      const submitBtn = document.getElementById("formSubmitBtn");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const accessKey = form.querySelector('[name="access_key"]').value;
+        if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+          statusEl.dataset.state = "error";
+          statusEl.textContent =
+            "Form not connected yet — add your Web3Forms access key in index.html.";
+          return;
+        }
+
+        submitBtn.disabled = true;
+        statusEl.dataset.state = "sending";
+        statusEl.textContent = "Sending...";
+
+        try {
+          const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(Object.fromEntries(new FormData(form))),
+          });
+          const data = await res.json();
+
+          if (data.success) {
+            statusEl.dataset.state = "success";
+            statusEl.textContent =
+              "Thanks! Your message has been sent — I'll reply soon.";
+            form.reset();
+          } else {
+            throw new Error(data.message || "Something went wrong");
+          }
+        } catch (err) {
+          statusEl.dataset.state = "error";
+          statusEl.textContent =
+            "Could not send message. Please try emailing me directly.";
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
