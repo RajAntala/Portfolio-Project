@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 — Lost in Space</title>
+    <title>404 — Page Not Found | Raj Antala</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Head back to Raj Antala's portfolio.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0a0a0f">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
         rel="stylesheet">
     <style>
@@ -25,7 +28,7 @@
             font-family: 'DM Sans', sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +36,6 @@
             position: relative;
         }
 
-        /* Portfolio style background blobs */
         .blob {
             position: absolute;
             width: 400px;
@@ -47,13 +49,12 @@
         }
 
         @keyframes move {
-            from {
-                transform: translate(-10%, -10%) scale(1);
-            }
+            from { transform: translate(-10%, -10%) scale(1); }
+            to { transform: translate(10%, 10%) scale(1.1); }
+        }
 
-            to {
-                transform: translate(10%, 10%) scale(1.1);
-            }
+        @media (prefers-reduced-motion: reduce) {
+            .blob, .glitch { animation: none; }
         }
 
         .container {
@@ -70,17 +71,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
-        }
-
-        .error-code::after {
-            content: "404";
-            position: absolute;
-            left: 2px;
-            top: 2px;
-            z-index: -1;
-            -webkit-text-stroke: 1px var(--accent);
-            -webkit-text-fill-color: transparent;
-            opacity: 0.5;
         }
 
         h1 {
@@ -101,6 +91,7 @@
             display: flex;
             gap: 15px;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -134,27 +125,15 @@
             border-color: #fff;
         }
 
-        /* Glitch effect animation */
         .glitch {
             animation: glitch 3s infinite;
         }
 
         @keyframes glitch {
-            0% {
-                transform: skew(0deg);
-            }
-
-            2% {
-                transform: skew(10deg);
-            }
-
-            4% {
-                transform: skew(-10deg);
-            }
-
-            6% {
-                transform: skew(0deg);
-            }
+            0% { transform: skew(0deg); }
+            2% { transform: skew(10deg); }
+            4% { transform: skew(-10deg); }
+            6% { transform: skew(0deg); }
         }
     </style>
 </head>
