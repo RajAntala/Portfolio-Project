@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO -->
-    <title>Raj Antala — Shopify App Developer &amp; React JS Specialist</title>
+    <title>Raj Antala — Shopify App Developer & React JS Specialist</title>
     <meta name="description"
-        content="Raj Antala is a Shopify App Developer &amp; React JS Specialist building custom Shopify apps, Shopify Functions, and high-performance React/Next.js web applications.">
+        content="Raj Antala is a Shopify App Developer & React JS Specialist building custom Shopify apps, Shopify Functions, and high-performance React/Next.js web applications.">
     <meta name="keywords"
         content="Raj Antala, Shopify App Developer, Shopify Developer India, React JS Developer, Next.js Developer, Shopify Functions, Shopify Remix, Freelance Web Developer">
     <meta name="author" content="Raj Antala">
@@ -18,7 +18,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rajantala.com/">
-    <meta property="og:title" content="Raj Antala — Shopify App Developer &amp; React JS Specialist">
+    <meta property="og:title" content="Raj Antala — Shopify App Developer & React JS Specialist">
     <meta property="og:description"
         content="Custom Shopify apps, Shopify Functions and high-performance React/Next.js web experiences — built by Raj Antala.">
     <meta property="og:image" content="https://rajantala.com/assets/og-cover.jpg">
@@ -30,14 +30,15 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@razz_antala">
-    <meta name="twitter:title" content="Raj Antala — Shopify App Developer &amp; React JS Specialist">
+    <meta name="twitter:title" content="Raj Antala — Shopify App Developer & React JS Specialist">
     <meta name="twitter:description"
         content="Custom Shopify apps, Shopify Functions and high-performance React/Next.js web experiences.">
     <meta name="twitter:image" content="https://rajantala.com/assets/og-cover.jpg">
 
     <!-- Theme -->
     <meta name="theme-color" content="#0A0A0F">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0A0F'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='52' font-weight='800' fill='%237C3AED' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0A0F'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='52' font-weight='800' fill='%237C3AED' text-anchor='middle'%3ERA%3C/text%3E%3C/svg%3E">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap"
@@ -68,11 +69,19 @@
 
 <body>
 
+    <canvas id="particles-bg"></canvas>
+
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follow" id="cursor-follow"></div>
 
+    <!-- Animated background gradient -->
+    <div class="animated-bg"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
     <!-- Nav -->
-    <nav>
+    <nav class="navbar">
         <a href="#hero" class="nav-logo">RA<span>.</span></a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -80,7 +89,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobileMenu">
             <span></span><span></span><span></span>
         </button>
     </nav>
@@ -95,31 +105,45 @@
     </div>
 
     <!-- Hero -->
-    <section id="hero">
+    <section id="hero" class="hero-section">
         <div class="hero-bg">
             <div class="blob blob-1" data-depth="0.6"></div>
             <div class="blob blob-2" data-depth="0.9"></div>
             <div class="blob blob-3" data-depth="1.3"></div>
             <div class="noise"></div>
         </div>
-        <div class="hero-content">
-            <div class="hero-tag" data-hero>Available for work</div>
-            <h1 data-hero>
-                Creative<br>
-                <span class="accent">Web Dev</span>
-                <span class="outline">&amp; Designer</span>
-            </h1>
-            <p class="hero-desc" data-hero>
-                I focus on creating beautiful digital experiences — a perfect blend of code and design.
-            </p>
-            <div class="hero-ctas" data-hero>
-                <a href="#projects" class="btn btn-primary">View My Work →</a>
-                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag" data-hero>
+                    <span class="pulse-dot"></span>
+                    Available for work
+                </div>
+                <h1 class="hero-title" data-hero>
+                    Creative<br>
+                    <span class="accent">Web Dev</span>
+                    <span class="outline">&amp; Designer</span>
+                </h1>
+                <p class="hero-desc" data-hero>
+                    Building scalable e-commerce solutions with code that's clean, fast, and beautiful. Specialized in
+                    Shopify & React.
+                </p>
+                <div class="hero-ctas" data-hero>
+                    <a href="#projects" class="btn btn-primary btn-glow">View My Work →</a>
+                    <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-hero>
+                <div class="photo-frame">
+                    <!-- Replace with your photo -->
+                    <img src="./assets/raj-antala.png" alt="Raj Antala" class="profile-photo">
+                    <div class="frame-glow"></div>
+                    <div class="frame-border"></div>
+                </div>
             </div>
         </div>
         <div class="hero-scroll" data-hero>
             <div class="scroll-line"></div>
-            Scroll down
+            Scroll to explore
         </div>
     </section>
 
@@ -132,8 +156,7 @@
             <span>Shopify Liquid</span><span class="dot">◆</span>
             <span>TypeScript</span><span class="dot">◆</span>
             <span>JavaScript</span><span class="dot">◆</span>
-            <span>PHP</span><span class="dot">◆</span>
-            <span>MUI</span><span class="dot">◆</span>
+            <span>Shopify Functions</span><span class="dot">◆</span>
             <span>Tailwind CSS</span><span class="dot">◆</span>
 
             <span>React.js</span><span class="dot">◆</span>
@@ -142,14 +165,13 @@
             <span>Shopify Liquid</span><span class="dot">◆</span>
             <span>TypeScript</span><span class="dot">◆</span>
             <span>JavaScript</span><span class="dot">◆</span>
-            <span>PHP</span><span class="dot">◆</span>
-            <span>MUI</span><span class="dot">◆</span>
+            <span>Shopify Functions</span><span class="dot">◆</span>
             <span>Tailwind CSS</span><span class="dot">◆</span>
         </div>
     </div>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="about-section">
         <div style="max-width:1100px;margin:0 auto;">
             <div class="section-label reveal">About Me</div>
             <h2 class="reveal reveal-delay-1">I am a <span style="color:var(--c2)">problem solver</span><br>who
@@ -183,8 +205,8 @@
                     <div class="stat-label">Shopify Apps Built</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-count="5">0</div>
-                    <div class="stat-label">Core Technologies</div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Happy Clients</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" data-count="100" data-suffix="%">0</div>
@@ -195,7 +217,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="skills-section">
         <div class="skills-header">
             <div class="section-label reveal">My Expertise</div>
             <h2 class="reveal reveal-delay-1">Skills that <span style="color:var(--c3)">drive results</span></h2>
@@ -204,8 +226,8 @@
             <div class="skill-card reveal" style="--card-accent:#F7DF1E">
                 <span class="skill-icon">🟨</span>
                 <div class="skill-name">JavaScript (ES6+)</div>
-                <div class="skill-desc">Modern JS expert — promises, async/await, and closure jeva complex concepts ma
-                    master.</div>
+                <div class="skill-desc">Modern JS expert — promises, async/await, and closure handling for complex
+                    concepts.</div>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar-label"><span>Proficiency</span><span>96%</span></div>
                     <div class="skill-bar">
@@ -217,8 +239,8 @@
             <div class="skill-card reveal reveal-delay-1" style="--card-accent:#3178C6">
                 <span class="skill-icon">🟦</span>
                 <div class="skill-name">TypeScript</div>
-                <div class="skill-desc">Type-safe code lakhva ma expert, jethi bugs pan na aave ane architecture
-                    scalable rahe.</div>
+                <div class="skill-desc">Type-safe code architecture with expert-level error prevention and scalability.
+                </div>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar-label"><span>Proficiency</span><span>90%</span></div>
                     <div class="skill-bar">
@@ -230,7 +252,8 @@
             <div class="skill-card reveal reveal-delay-2" style="--card-accent:#61DAFB">
                 <span class="skill-icon">⚛️</span>
                 <div class="skill-name">React / Next.js</div>
-                <div class="skill-desc">SSR, ISR, ane high-performance components banava mate Next.js no upyog.</div>
+                <div class="skill-desc">SSR, ISR, and high-performance components for production-grade applications.
+                </div>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar-label"><span>Proficiency</span><span>94%</span></div>
                     <div class="skill-bar">
@@ -242,8 +265,7 @@
             <div class="skill-card reveal" style="--card-accent:#764ABC">
                 <span class="skill-icon">🔄</span>
                 <div class="skill-name">Redux / Toolkit</div>
-                <div class="skill-desc">Complex application state ne handle karva mate Redux Toolkit ane Thunk ma
-                    mastery.</div>
+                <div class="skill-desc">Complex application state management with Redux Toolkit and async thunks.</div>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar-label"><span>Proficiency</span><span>88%</span></div>
                     <div class="skill-bar">
@@ -255,7 +277,7 @@
             <div class="skill-card reveal reveal-delay-1" style="--card-accent:#95BF47">
                 <span class="skill-icon">🛍️</span>
                 <div class="skill-name">Shopify App Dev</div>
-                <div class="skill-desc">1 year+ experience in Shopify Remix, App Bridge, ane Shopify Functions.</div>
+                <div class="skill-desc">1 year+ experience in Shopify Remix, App Bridge, and Shopify Functions.</div>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar-label"><span>Proficiency</span><span>92%</span></div>
                     <div class="skill-bar">
@@ -263,11 +285,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="skill-card reveal reveal-delay-2" style="--card-accent:#00D4FF">
+                <span class="skill-icon">🎨</span>
+                <div class="skill-name">UI/UX Design</div>
+                <div class="skill-desc">Figma, prototyping, and responsive design for beautiful user experiences.</div>
+                <div class="skill-bar-wrap">
+                    <div class="skill-bar-label"><span>Proficiency</span><span>85%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width:85%"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <div class="projects-header">
             <div class="section-label reveal">Portfolio</div>
             <h2 class="reveal reveal-delay-1">Selected <span style="color:var(--c1)">Projects</span></h2>
@@ -299,8 +333,8 @@
                 </div>
                 <div class="project-info">
                     <div class="project-title">DataPulse — Analytics Dashboard</div>
-                    <div class="project-desc">Real-time analytics aur beautiful data visualizations ke saath ek SaaS
-                        dashboard. 500+ companies use karti hain.</div>
+                    <div class="project-desc">Real-time analytics and beautiful data visualizations with a SaaS
+                        dashboard. 500+ companies use it.</div>
                     <div class="project-techs">
                         <span class="tech-pill">React</span><span class="tech-pill">D3.js</span><span
                             class="tech-pill">Node.js</span><span class="tech-pill">WebSocket</span>
@@ -316,8 +350,8 @@
                 </div>
                 <div class="project-info">
                     <div class="project-title">Zestify — Food Delivery Brand</div>
-                    <div class="project-desc">Complete brand identity aur website design ek food startup ke liye. Fun,
-                        youthful aur conversion-focused design.</div>
+                    <div class="project-desc">Complete brand identity and website design for a food startup. Fun,
+                        youthful and conversion-focused.</div>
                     <div class="project-techs">
                         <span class="tech-pill">Figma</span><span class="tech-pill">HTML/CSS</span><span
                             class="tech-pill">GSAP</span><span class="tech-pill">Framer</span>
@@ -333,8 +367,8 @@
                 </div>
                 <div class="project-info">
                     <div class="project-title">MindSpace — Meditation App UI</div>
-                    <div class="project-desc">Ek calming aur intuitive meditation app ka complete UI/UX design —
-                        wireframes se lekar high-fidelity prototype tak.</div>
+                    <div class="project-desc">Calming and intuitive meditation app with complete UI/UX design from
+                        wireframes to prototype.</div>
                     <div class="project-techs">
                         <span class="tech-pill">Figma</span><span class="tech-pill">Prototyping</span><span
                             class="tech-pill">User Research</span>
@@ -345,7 +379,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="contact-inner">
             <div class="section-label reveal" style="justify-content:center;">Get in Touch</div>
             <h2 class="reveal reveal-delay-1">
@@ -355,13 +389,6 @@
                 If you have a project idea, a collaboration plan, or just want to say hello — I am always available!
             </p>
 
-            <!--
-                CONTACT FORM — powered by Web3Forms (free, no backend needed).
-                Setup (2 min):
-                1. Go to https://web3forms.com and enter your email (rajantala240@gmail.com) to get a free Access Key.
-                2. Replace YOUR_ACCESS_KEY_HERE below with that key.
-                Every submission is emailed straight to your inbox.
-            -->
             <form class="contact-form reveal reveal-delay-3" id="contactForm">
                 <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                 <input type="hidden" name="subject" value="New message from rajantala.dev portfolio">
@@ -371,17 +398,22 @@
                     <div class="field">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <div class="field-focus-line"></div>
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <div class="field-focus-line"></div>
                     </div>
                 </div>
                 <div class="field">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..."
+                        required></textarea>
+                    <div class="field-focus-line"></div>
                 </div>
-                <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">Send Message →</button>
+                <button type="submit" class="btn btn-primary form-submit btn-glow" id="formSubmitBtn">Send Message
+                    →</button>
                 <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
 
@@ -394,10 +426,11 @@
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                    </span> Email Me
+                    </span> Email
                 </a>
 
-                <a href="https://in.linkedin.com/in/razz-antala-938830241" target="_blank" rel="noopener" class="contact-link">
+                <a href="https://in.linkedin.com/in/razz-antala-938830241" target="_blank" rel="noopener"
+                    class="contact-link">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -447,12 +480,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Raj Antala. Sab rights reserved.</p>
-        <a href="#hero" class="footer-back-top">↑ Go to Top</a>
+        <p>© 2025 Raj Antala. All rights reserved.</p>
+        <a href="#hero" class="footer-back-top">↑ Back to Top</a>
     </footer>
 
     <script>
-        // ---------- Custom cursor ----------
+        // ---------- ENHANCED ANIMATIONS ----------
+
+        // Custom cursor
         const cursor = document.getElementById('cursor');
         const cursorFollow = document.getElementById('cursor-follow');
         let mouseX = 0, mouseY = 0;
@@ -460,115 +495,305 @@
 
         if (hasFinePointer) {
             document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX; mouseY = e.clientY;
+                mouseX = e.clientX;
+                mouseY = e.clientY;
                 cursor.style.left = mouseX - 6 + 'px';
                 cursor.style.top = mouseY - 6 + 'px';
                 cursorFollow.style.left = mouseX - 18 + 'px';
                 cursorFollow.style.top = mouseY - 18 + 'px';
             });
 
-            document.querySelectorAll('a, button, .project-card, .skill-card').forEach(el => {
+            document.querySelectorAll('a, button, .project-card, .skill-card, .contact-link').forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.style.transform = 'scale(2.5)';
                     cursorFollow.style.transform = 'scale(0.5)';
+                    cursorFollow.style.borderColor = getComputedStyle(el).color;
                 });
                 el.addEventListener('mouseleave', () => {
                     cursor.style.transform = 'scale(1)';
                     cursorFollow.style.transform = 'scale(1)';
+                    cursorFollow.style.borderColor = 'var(--c2)';
                 });
             });
         }
 
-        // ---------- GSAP setup ----------
-        // Safety net: if the GSAP CDN fails to load (ad-blocker, firewall, CDN outage),
-        // force every .reveal element visible instead of leaving the page permanently blank.
+        // GSAP animations
         if (typeof gsap === 'undefined') {
             document.querySelectorAll('.reveal').forEach(el => {
                 el.style.opacity = '1';
                 el.style.transform = 'none';
             });
         } else {
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        gsap.registerPlugin(ScrollTrigger);
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            gsap.registerPlugin(ScrollTrigger);
 
-        if (!prefersReducedMotion) {
-            // Hero entrance sequence
-            gsap.timeline({ defaults: { ease: 'power3.out' } })
-                .from('[data-hero]', { y: 30, opacity: 0, duration: 0.9, stagger: 0.12 })
-                .from('.blob', { scale: 0.6, opacity: 0, duration: 1.4, stagger: 0.15, ease: 'power2.out' }, 0);
+            if (!prefersReducedMotion) {
+                // ===== HERO ENTRANCE =====
+                const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+                heroTl
+                    .from('[data-hero]', { y: 40, opacity: 0, duration: 0.9, stagger: 0.15 }, 0)
+                    .from('.blob', { scale: 0.5, opacity: 0, duration: 1.2, stagger: 0.2, ease: 'back.out' }, 0.2)
+                    .from('.photo-frame', { scale: 0.8, opacity: 0, duration: 1, ease: 'back.out' }, 0.3);
 
-            // Ambient blob float
-            gsap.to('.blob-1', { y: 30, x: 20, scale: 1.08, duration: 8, ease: 'sine.inOut', yoyo: true, repeat: -1 });
-            gsap.to('.blob-2', { y: -25, x: -15, scale: 1.1, duration: 9, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.5 });
-            gsap.to('.blob-3', { y: 20, x: -20, scale: 1.05, duration: 7, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1 });
-
-            // Subtle parallax on scroll
-            document.querySelectorAll('[data-depth]').forEach(el => {
-                const depth = parseFloat(el.dataset.depth);
-                gsap.to(el, {
-                    yPercent: 20 * depth,
-                    ease: 'none',
-                    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 0.5 }
+                // ===== AMBIENT ANIMATIONS =====
+                // Floating blobs with parallax
+                gsap.to('.blob-1', {
+                    y: '+=40',
+                    x: '+=25',
+                    scale: 1.1,
+                    duration: 10,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1
                 });
-            });
 
-            // Scroll reveals (also covers project cards — they carry the .reveal class)
-            gsap.utils.toArray('.reveal').forEach((el, i) => {
-                const isProjectCard = el.classList.contains('project-card');
-                gsap.to(el, {
-                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-                    delay: isProjectCard ? (i % 2) * 0.1 : 0,
-                    scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+                gsap.to('.blob-2', {
+                    y: '-=35',
+                    x: '-=20',
+                    scale: 1.12,
+                    duration: 12,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 0.5
                 });
-            });
 
-            // Fonts load asynchronously and change layout height *after* ScrollTrigger
-            // has already measured trigger positions — this can leave a trigger point
-            // stale, so a card's reveal condition never fires. Recalculate once fonts
-            // and all assets are actually in place.
-            if (document.fonts && document.fonts.ready) {
-                document.fonts.ready.then(() => ScrollTrigger.refresh());
+                gsap.to('.blob-3', {
+                    y: '+=30',
+                    x: '-=25',
+                    scale: 1.08,
+                    duration: 9,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 1
+                });
+
+                // Floating gradient orbs
+                gsap.to('.orb-1', {
+                    y: '+=50',
+                    duration: 15,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1
+                });
+
+                gsap.to('.orb-2', {
+                    x: '+=60',
+                    duration: 18,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 0.3
+                });
+
+                gsap.to('.orb-3', {
+                    y: '-=45',
+                    x: '-=40',
+                    duration: 20,
+                    ease: 'sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                    delay: 0.6
+                });
+
+                // Photo frame glow pulse
+                gsap.to('.frame-glow', {
+                    opacity: [0.3, 0.8, 0.3],
+                    duration: 4,
+                    ease: 'sine.inOut',
+                    repeat: -1
+                });
+
+                // ===== SCROLL PARALLAX =====
+                document.querySelectorAll('[data-depth]').forEach(el => {
+                    const depth = parseFloat(el.dataset.depth);
+                    gsap.to(el, {
+                        yPercent: 25 * depth,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: '#hero',
+                            start: 'top top',
+                            end: 'bottom top',
+                            scrub: 0.5
+                        }
+                    });
+                });
+
+                // ===== SCROLL REVEALS =====
+                gsap.utils.toArray('.reveal').forEach((el, i) => {
+                    gsap.to(el, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: 'power3.out',
+                        delay: (i % 2) * 0.1,
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 85%',
+                            once: true
+                        }
+                    });
+                });
+
+                window.addEventListener('load', () => {
+                    setTimeout(() => ScrollTrigger.refresh(), 300);
+                });
+
+                // ===== STAGGERED PROJECT CARDS =====
+                gsap.utils.toArray('.project-card').forEach((card, i) => {
+                    gsap.fromTo(card,
+                        { opacity: 0, y: 50 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            ease: 'power2.out',
+                            delay: i * 0.15,
+                            scrollTrigger: {
+                                trigger: card,
+                                start: 'top 90%',
+                                once: true
+                            }
+                        }
+                    );
+                });
+
+                // ===== SKILL CARDS STAGGER =====
+                gsap.utils.toArray('.skill-card').forEach((card, i) => {
+                    gsap.from(card, {
+                        opacity: 0,
+                        y: 40,
+                        duration: 0.7,
+                        ease: 'back.out',
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: '#skills',
+                            start: 'top 75%',
+                            once: true
+                        }
+                    });
+                });
+
+                // Font loading refresh
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(() => ScrollTrigger.refresh());
+                }
+                window.addEventListener('load', () => ScrollTrigger.refresh());
+
+                // Safety fallback
+                setTimeout(() => {
+                    document.querySelectorAll('.reveal').forEach(el => {
+                        if (getComputedStyle(el).opacity === '0') {
+                            gsap.to(el, { opacity: 1, y: 0, duration: 0.5 });
+                        }
+                    });
+                }, 4000);
+            } else {
+                gsap.set('.reveal', { opacity: 1, y: 0 });
             }
-            window.addEventListener('load', () => ScrollTrigger.refresh());
-
-            // Final safety net: if anything is still hidden a few seconds in
-            // (stale trigger, slow asset, edge-case browser), just reveal it.
-            setTimeout(() => {
-                document.querySelectorAll('.reveal').forEach(el => {
-                    if (getComputedStyle(el).opacity === '0') {
-                        gsap.to(el, { opacity: 1, y: 0, duration: 0.5 });
-                    }
-                });
-            }, 3500);
-        } else {
-            gsap.set('.reveal', { opacity: 1, y: 0 });
         }
-        } // end gsap-available check
 
-        // Skill bar fill (kept as CSS-class driven, works regardless of motion pref)
+        // ===== PARTICLE / STARS BACKGROUND =====
+        (() => {
+            const canvas = document.getElementById('particles-bg');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            let particles = [];
+            let w, h;
+            const COUNT = window.innerWidth < 768 ? 40 : 90;
+            const MAX_DIST = 140;
+
+            function resize() {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            function initParticles() {
+                particles = Array.from({ length: COUNT }, () => ({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 0.25,
+                    vy: (Math.random() - 0.5) * 0.25,
+                    r: Math.random() * 1.6 + 0.6,
+                    twinkle: Math.random() * Math.PI * 2
+                }));
+            }
+            initParticles();
+
+            const accent = getComputedStyle(document.documentElement).getPropertyValue('--c2').trim() || '#7C3AED';
+
+            function draw() {
+                ctx.clearRect(0, 0, w, h);
+
+                // update + draw particles
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.twinkle += 0.02;
+
+                    if (p.x < 0) p.x = w;
+                    if (p.x > w) p.x = 0;
+                    if (p.y < 0) p.y = h;
+                    if (p.y > h) p.y = 0;
+
+                    const alpha = 0.3 + Math.sin(p.twinkle) * 0.3;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255,255,255,${Math.max(alpha, 0.15)})`;
+                    ctx.fill();
+                });
+
+                // connecting lines between nearby particles
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < MAX_DIST) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(124,58,237,${0.15 * (1 - dist / MAX_DIST)})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                if (!prefersReducedMotion) requestAnimationFrame(draw);
+            }
+
+            draw();
+        })();
+
+        // ===== SKILL BARS =====
         const skillCards = document.querySelectorAll('.skill-card');
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    skillObserver.unobserve(entry.target);
+                }
             });
         }, { threshold: 0.3 });
         skillCards.forEach(el => skillObserver.observe(el));
 
-        // ---------- Nav scroll effect ----------
-        const nav = document.querySelector('nav');
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 60) {
-                nav.style.background = 'rgba(10,10,15,0.85)';
-                nav.style.backdropFilter = 'blur(20px)';
-                nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+                navbar.classList.add('scrolled');
             } else {
-                nav.style.background = 'transparent';
-                nav.style.backdropFilter = 'none';
-                nav.style.borderBottom = 'none';
+                navbar.classList.remove('scrolled');
             }
         });
 
-        // ---------- Mobile menu ----------
+        // ===== MOBILE MENU =====
         const navToggle = document.getElementById('navToggle');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -588,7 +813,7 @@
 
         mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
 
-        // ---------- Active nav link on scroll ----------
+        // ===== ACTIVE NAV LINK =====
         const sections = document.querySelectorAll('section[id]');
         const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
         const navSpy = new IntersectionObserver((entries) => {
@@ -602,7 +827,7 @@
         }, { rootMargin: '-45% 0px -50% 0px' });
         sections.forEach(sec => navSpy.observe(sec));
 
-        // ---------- About stats count-up ----------
+        // ===== STATS COUNTER =====
         const statEls = document.querySelectorAll('.stat-number');
         const statObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -610,8 +835,9 @@
                 const el = entry.target;
                 const target = parseInt(el.dataset.count, 10);
                 const suffix = el.dataset.suffix || '+';
-                const duration = 1400;
+                const duration = 1800;
                 const start = performance.now();
+
                 function tick(now) {
                     const progress = Math.min((now - start) / duration, 1);
                     const eased = 1 - Math.pow(1 - progress, 3);
@@ -624,10 +850,21 @@
         }, { threshold: 0.5 });
         statEls.forEach(el => statObserver.observe(el));
 
-        // ---------- Contact form (Web3Forms) ----------
+        // ===== FORM INTERACTIONS =====
         const form = document.getElementById('contactForm');
         const statusEl = document.getElementById('formStatus');
         const submitBtn = document.getElementById('formSubmitBtn');
+        const formFields = form.querySelectorAll('.field');
+
+        formFields.forEach(field => {
+            const input = field.querySelector('input, textarea');
+            input.addEventListener('focus', () => {
+                field.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                if (!input.value) field.classList.remove('focused');
+            });
+        });
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -635,13 +872,13 @@
             const accessKey = form.querySelector('[name="access_key"]').value;
             if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
                 statusEl.dataset.state = 'error';
-                statusEl.textContent = 'Form not connected yet — add your Web3Forms access key in index.html.';
+                statusEl.textContent = '⚠️ Form not configured. Add Web3Forms access key in index.html';
                 return;
             }
 
             submitBtn.disabled = true;
             statusEl.dataset.state = 'sending';
-            statusEl.textContent = 'Sending...';
+            statusEl.textContent = '✉️ Sending your message...';
 
             try {
                 const res = await fetch('https://api.web3forms.com/submit', {
@@ -653,14 +890,15 @@
 
                 if (data.success) {
                     statusEl.dataset.state = 'success';
-                    statusEl.textContent = "Thanks! Your message has been sent — I'll reply soon.";
+                    statusEl.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
                     form.reset();
+                    formFields.forEach(field => field.classList.remove('focused'));
                 } else {
                     throw new Error(data.message || 'Something went wrong');
                 }
             } catch (err) {
                 statusEl.dataset.state = 'error';
-                statusEl.textContent = 'Could not send message. Please try emailing me directly.';
+                statusEl.textContent = '❌ Failed to send. Please email me directly instead.';
             } finally {
                 submitBtn.disabled = false;
             }
